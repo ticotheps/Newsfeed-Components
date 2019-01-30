@@ -28,3 +28,5 @@ class Article {
 
 let articles = document.querySelectorAll(".article");
 console.log(articles);
+
+articles.forEach( article => new Article(article));
