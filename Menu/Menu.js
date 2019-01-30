@@ -2,7 +2,9 @@
 const toggleMenu = () => {
   // Toggle the "menu--open" class on your menu reference. 
   console.log("The toggle-function of the menu has been triggered due to a click on the .menu-button <img> element!");
-  menu.style.display = "block";
+
+  menu.classList.toggle('menu--open');
+  console.log(menu.classList);
 }
 
 // Start Here: Create a reference to the ".menu" class
