@@ -9,6 +9,7 @@ class Article {
     // create a reference to the ".expandButton" class. 
     this.expandBtn = domElement.querySelector(".expandButton");
 
+    // Created this variable to hold the value from reference to ".expandButton" class
     const expandBtn = this.expandBtn;
     console.log(expandBtn);
 
@@ -23,8 +24,6 @@ class Article {
   expandArticle() {
     // Using our reference to the domElement, toggle a class to expand or hide the article.
     console.log("The toggle-function of the domElement was triggered due to a click on the expand button.");
-
-  
   }
 }
 
