@@ -21,9 +21,9 @@ class Article {
     // Using our reference to the domElement, toggle a class to expand or hide the article.
     console.log("The toggle-function of the domElement was triggered due to a click on the expand button.");
     this.domElement.classList.toggle("article-open");
-    this.expandButton.textContent == 'Collapse'
-         ? this.expandButton.textContent = 'Expand'
-         : this.expandButton.textContent = 'Collapse';
+    this.expandButton.textContent == 'collapse'
+         ? this.expandButton.textContent = 'expand'
+         : this.expandButton.textContent = 'collapse';
   }
 }
 
@@ -46,3 +46,16 @@ articles.forEach( (article) => {
 });
 
 // articles.forEach( article => new Article(article));
+
+
+//*=====* STRETCH *=====*
+
+const articleH2 = document.querySelector('div.article h2');
+
+// Event Listener #1 - 'click'
+articleH2.addEventListener('click', e => {
+  console.log(`User has clicked on a <h2> element within the '.article' <div>, triggering this event: ${e}`);
+  articleH2.style.color = "yellow";
+  articleH2.style.backgroundColor = "blue";
+  TweenMax.from("div.article h2", 1, {x:25, ease: Bounce.easeOut});
+});
